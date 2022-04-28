@@ -43,8 +43,15 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
+dd,
+button,
+a,
+*::placeholder {
   margin: 0;
+  padding: 0;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-size: inherit
 }
 
 ul {
@@ -71,4 +78,16 @@ h4,
 h5,
 h6 {
   font-weight: inherit;
+}
+
+address {
+  font-style: inherit;
+}
+
+*::placeholder {
+  margin: 0;
+  padding: 0;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-size: inherit
 }
