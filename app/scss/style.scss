@@ -27,10 +27,9 @@
   }
 
   &__link {
-
     position: relative;
     font-size: 13px;
-    font-weight: 700;
+    @extend %open-sans-700;
     border-radius: 3px;
     color: $white;
     transition: all .3s;
@@ -112,6 +111,7 @@
     position: relative;
     background-color: $white;
     color: $green-900;
+    @extend %open-sans-600;
     border-radius: 6px;
     transition: all 0.3s
   }
@@ -277,6 +277,7 @@
     padding: 15px;
     background-color: $dark-800;
     text-transform: uppercase;
+    @extend %open-sans-600;
     border-radius: 0 6px 6px 0;
     transition: all 0.3s;
 
@@ -288,7 +289,6 @@
       background-color: $dark-800;
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
       color: rgba(255, 255, 255, 0.5);
-
     }
 
   }
@@ -391,7 +391,6 @@
 
     &::placeholder {
       color: $dark-800;
-      font-weight: 400;
     }
   }
 
@@ -476,14 +475,12 @@
     left: 3px;
     background-color: $white;
     border-radius: 50%;
-    font-weight: 600;
+    @extend %open-sans-600;
     font-size: 10px;
     line-height: 1;
     color: $red-900;
   }
 }
-
-
 
 .top-slider {
   &__banner {
@@ -511,7 +508,6 @@
     @extend %ruda-900;
     font-size: 60px;
     line-height: 1.3;
-    letter-spacing: .04em;
     text-transform: uppercase;
     color: $dark-500;
 
@@ -524,7 +520,6 @@
   &__item-text {
     margin-bottom: 32px;
     font-size: 16px;
-    letter-spacing: initial;
     color: $dark-500;
   }
 }
@@ -569,7 +564,7 @@
   }
 
   &:active {
-    background-color: #f3f3f2;
+    background-color: $green-100;
     outline: transparent;
   }
 
@@ -628,10 +623,10 @@
   &__item-title {
     margin-bottom: 6px;
     font-size: 16px;
+    @extend %open-sans-600;
   }
 
   &__desc {
-    font-weight: 400;
     color: $dark-500;
   }
 }
@@ -663,9 +658,8 @@
 
   &__filter-btn {
     margin-bottom: 50px;
-    font-weight: 700;
+    @extend %open-sans-700;
     font-size: 15px;
-    letter-spacing: 0.01em;
     color: $dark-500;
     text-transform: uppercase;
     border-radius: 6px;
@@ -713,11 +707,11 @@
     }
 
     &:focus {
-      outline: solid 4px rgba(99, 166, 14, 0.5);
+      outline: solid 4px $green-05;
     }
 
     &:active {
-      color: rgba(99, 166, 14, 0.5);
+      color: $green-05;
       box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
     }
   }
@@ -759,7 +753,7 @@
   &__title {
     height: 4.1em;
     margin-bottom: auto;
-    font-weight: 600;
+    @extend %open-sans-600;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -802,10 +796,10 @@
 
     &::after {
       content: "";
-      height: 28px;
-      width: 28px;
+      height: 20px;
+      width: 20px;
       position: absolute;
-      top: 55%;
+      top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
       background-image: url("../images/icon/icon-search-gr.svg");
@@ -815,8 +809,6 @@
     }
   }
 }
-
-
 
 
 .badge-list {
@@ -831,8 +823,6 @@
   }
 }
 
-
-
 .bagde {
   display: block;
   width: fit-content;
@@ -840,7 +830,7 @@
   border-radius: 6px;
   font-size: 10px;
   line-height: 1;
-  font-weight: 700;
+  @extend %open-sans-700;
   text-transform: uppercase;
   color: $white;
 }
@@ -878,18 +868,14 @@
   }
 }
 
-
-
 .price {
   width: fit-content;
   margin-top: auto;
-  line-height: 1;
   color: $dark-500;
   position: relative;
 }
 
 .price--old {
-  margin-bottom: 3px;
   color: $silver-600;
 
   &::after {
@@ -961,14 +947,6 @@
     justify-content: space-between;
   }
 
-  &__contact-list {
-    margin-bottom: 18px;
-  }
-
-  &__contact-item:not(:last-child) {
-    margin-bottom: 18px;
-  }
-
   &__nav-list {
     column-count: 3;
     column-gap: 70px;
@@ -977,6 +955,15 @@
   &__nav-item {
     margin-bottom: 18px;
   }
+
+  &__contact-list {
+    margin-bottom: 18px;
+  }
+
+  &__contact-item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
 
   &__link {
     border-radius: 3px;
@@ -1041,7 +1028,7 @@
     height: 100%;
     right: 0;
     font-size: 12px;
-    font-weight: 700;
+    @extend %open-sans-700;
     border-radius: 0 6px 6px 0;
     text-transform: uppercase;
   }
@@ -1052,10 +1039,6 @@
 
   li:not(:last-child) {
     margin-right: 12px
-  }
-
-  path {
-    transition: all .3s
   }
 
   &__link {
