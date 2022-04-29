@@ -8,13 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s;
-  outline: transparent;
-}
-
 button {
   padding: 0;
   background-color: transparent;
@@ -46,11 +39,13 @@ dl,
 dd,
 button,
 a,
+label,
 *::placeholder {
   margin: 0;
   padding: 0;
   font-weight: inherit;
-  font-size: inherit
+  font-size: inherit;
+  letter-spacing: inherit;
 }
 
 ul {

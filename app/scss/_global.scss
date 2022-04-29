@@ -7,9 +7,20 @@ body {
   background-color: $white;
   font-size: 14px;
   line-height: 1.4;
-  // letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
   color: $dark-900;
   @extend %open-sans-400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  outline: transparent;
+}
+
+path {
+  transition: all 0.3s;
 }
 
 .wrapper {
@@ -69,9 +80,7 @@ body {
   z-index: 10;
 }
 
-path {
-  transition: all 0.3s;
-}
+
 
 .section {
   padding: 72px 0

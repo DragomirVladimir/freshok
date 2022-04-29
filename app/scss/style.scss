@@ -5,7 +5,6 @@
 @import 'global';
 
 
-
 .header {
   &__nav {
     padding: 17px 0 15px;
@@ -32,11 +31,10 @@
     @extend %open-sans-700;
     border-radius: 3px;
     color: $white;
-    transition: all .3s;
 
     &--delivery,
     &--phone {
-      padding: 3px 0 3px 44px
+      padding: 3px 0 3px 40px
     }
 
     &--delivery::before,
@@ -70,8 +68,8 @@
 
     &:active {
       opacity: 1;
-      color: $green-100;
-      outline: rgba(0, 0, 0, 0)
+      color: $green-200;
+      outline: transparent;
     }
 
   }
@@ -207,9 +205,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 120%;
-    letter-spacing: .03em;
     color: $dark-900;
-    transition: all .3s
   }
 
   &__link:hover {
@@ -276,6 +272,7 @@
     color: $white;
     padding: 15px;
     background-color: $dark-800;
+    font-size: 14px;
     text-transform: uppercase;
     @extend %open-sans-600;
     border-radius: 0 6px 6px 0;
@@ -504,7 +501,7 @@
 
   &__item-title {
     max-width: 780px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     @extend %ruda-900;
     font-size: 60px;
     line-height: 1.3;
@@ -520,6 +517,7 @@
   &__item-text {
     margin-bottom: 32px;
     font-size: 16px;
+    letter-spacing: initial;
     color: $dark-500;
   }
 }
@@ -543,7 +541,6 @@
 
   path {
     fill: $dark-500;
-    transition: all 0.3s
   }
 
   &:focus {
@@ -616,7 +613,7 @@
     }
 
     &:not(:last-child) {
-      margin-right: 65px;
+      margin-right: 70px;
     }
   }
 
@@ -653,7 +650,7 @@
   }
 
   &__filter-item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 18px;
   }
 
   &__filter-btn {
@@ -835,15 +832,15 @@
   color: $white;
 }
 
-.badge-novelty {
+.badge--novelty {
   background-color: $green-900;
 }
 
-.badge-discount {
+.badge--discount {
   background-color: $red-900;
 }
 
-.badge-hit {
+.badge--hit {
   background-color: $orange-900;
 }
 
@@ -906,10 +903,6 @@
     background-color: transparent;
   }
 
-  path {
-    transition: all 0.3s
-  }
-
   &:hover {
     background-color: $green-deep;
   }
@@ -935,7 +928,7 @@
 
   &__top {
     padding: 30px 0;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+    border-bottom: solid 1px $dark-500;
   }
 
   &__logo {
@@ -949,15 +942,12 @@
 
   &__nav-list {
     column-count: 3;
-    column-gap: 70px;
+    width: 36%;
   }
 
   &__nav-item {
     margin-bottom: 18px;
-  }
 
-  &__contact-list {
-    margin-bottom: 18px;
   }
 
   &__contact-item:not(:last-child) {
@@ -968,19 +958,18 @@
   &__link {
     border-radius: 3px;
     letter-spacing: initial;
-    transition: all 0.3s;
 
     &:hover {
       opacity: 0.7
     }
 
     &:focus {
-      outline: solid 3px $green-100;
+      outline: solid 3px $green-200;
     }
 
     &:active {
       opacity: 1;
-      color: $green-100;
+      color: $green-200;
       outline: transparent;
     }
   }
@@ -1046,7 +1035,6 @@
     width: 32px;
     height: 32px;
     border-radius: 3px;
-    transform: all .3s;
     position: relative;
 
     &::after {
@@ -1074,7 +1062,7 @@
 
     &:active path {
       fill: $green-200;
-      opacity: 1
+      opacity: 1;
     }
   }
 }
@@ -1087,8 +1075,29 @@
   display: flex;
   align-items: center;
 
-  &:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 24px
+  }
+
+  &__btn {
+    border-radius: 3px;
+
+    &:hover path {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: solid 3px $green-200;
+    }
+
+    &:active {
+      outline: transparent;
+    }
+
+    &:active path {
+      fill: $green-200;
+      opacity: 1
+    }
   }
 
 }
