@@ -27,7 +27,7 @@ $(function () {
       e.stopPropagation())
   });
 
-  $(".top-slider").slick({
+  $(".banner__wrapper").slick({
 
     dots: false,
     infinite: false,
@@ -38,6 +38,17 @@ $(function () {
   });
 
 
-  var mixer = mixitup('.top-goods__list');
+
+  var containerEl1 = document.querySelector('[data-ref="mixitup-1"]');
+  var containerEl2 = document.querySelector('[data-ref="mixitup-2"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
 
 });

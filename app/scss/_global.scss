@@ -9,7 +9,8 @@ body {
   line-height: 1.4;
   letter-spacing: 0.03em;
   color: $dark-900;
-  @extend %open-sans-400;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -26,13 +27,13 @@ path {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%
+  height: 100%;
 }
 
 .container {
   max-width: 1320px;
   padding: 0 15px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .sr-only {
@@ -49,6 +50,7 @@ path {
 }
 
 .button {
+  display: inline-block;
   padding: 12px 24px;
   background-color: $green-900;
   font-size: 18px;
@@ -76,11 +78,9 @@ path {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  transition: all .3s;
+  transition: all 0.3s;
   z-index: 10;
 }
-
-
 
 .section {
   padding: 72px 0
@@ -90,7 +90,9 @@ path {
   margin-bottom: 26px;
   font-size: 32px;
   text-transform: uppercase;
-  @extend %ruda-600;
+  font-family: "Ruda", sans-serif;
+  font-weight: 600;
+  text-align: center;
 }
 
 .logo {
@@ -109,5 +111,48 @@ path {
 
   &:active {
     opacity: 0.8
+  }
+}
+
+.goods-filter {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: solid 3px transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &:focus {
+      border: solid 3px $green-200;
+    }
+
+    &:active {
+      border: solid 3px transparent;
+      border-bottom-color: $green-200;
+    }
+
+  }
+
+  .mixitup-control-active {
+    border: solid 3px transparent;
+    border-bottom-color: $green-200;
+  }
+
+  .mixitup-control-active:focus {
+    border: solid 3px $green-200;
   }
 }
