@@ -128,7 +128,7 @@ path {
     font-size: 15px;
     color: $dark-500;
     text-transform: uppercase;
-    border-radius: 6px;
+
     border: solid 3px transparent;
     transition: all 0.3s;
 
@@ -137,10 +137,12 @@ path {
     }
 
     &:focus {
+      border-radius: 6px;
       border: solid 3px $green-200;
     }
 
     &:active {
+      border-radius: 0;
       border: solid 3px transparent;
       border-bottom-color: $green-200;
     }
